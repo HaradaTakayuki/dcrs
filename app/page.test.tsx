@@ -25,14 +25,6 @@ test('p test', () => {
   expect(p?.textContent).toEqual('Upload and download your images here')
 })
 
-// test('div test', () => {
-//   const div3 = document.querySelectorAll('div')[3]
-//   expect(div3?.getAttribute('class')).toEqual('mt-8 space-y-6')
-
-//   const div0 = document.querySelector('div')
-//   expect(div0?.getAttribute('class')).toEqual(null)
-// })
-
 test('div test', () => {
   const div = document.querySelectorAll('div')[1]
   expect(div?.getAttribute('class')).toEqual('max-w-md w-full space-y-8')
