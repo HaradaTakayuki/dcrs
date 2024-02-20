@@ -2,12 +2,16 @@ import { expect, test } from 'bun:test'
 import { render } from '@testing-library/react'
 import Home from './page'
 
+document.body.innerHTML = ''
 render(<Home />)
 
 test('main test', () => {
   const main = document.querySelector('main')
   expect(main?.getAttribute('class')).toEqual(
     'min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8',
+  )
+  expect(main?.textContent).toEqual(
+    '障がい者手帳登録システムUpload and download your images here[派遣従業員向け]障がい者手帳画像をアップロードします。[労務担当者向け]障がい者手帳画像をダウンロードします。',
   )
 })
 
@@ -28,6 +32,9 @@ test('p test', () => {
 test('div test', () => {
   const div = document.querySelectorAll('div')[1]
   expect(div?.getAttribute('class')).toEqual('max-w-md w-full space-y-8')
+  expect(div?.textContent).toEqual(
+    '障がい者手帳登録システムUpload and download your images here[派遣従業員向け]障がい者手帳画像をアップロードします。[労務担当者向け]障がい者手帳画像をダウンロードします。',
+  )
 })
 
 test('Link test', () => {
