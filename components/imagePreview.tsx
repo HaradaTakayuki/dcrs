@@ -79,7 +79,9 @@ export const ImagePreview: FC = () => {
         {images.source && images.name ? (
           <img src={images.source} alt={images.name} />
         ) : (
-          '画像をアップロードする'
+          <span className="after:content-['*'] after:ml-0.5 after:text-red-500">
+            画像をアップロードする
+          </span>
         )}
         <ImageInput
           fileInputRef={fileInputRef}
@@ -93,7 +95,7 @@ export const ImagePreview: FC = () => {
           <button
             type="button"
             onClick={handleClickCancelButton}
-            className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2"
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2"
           >
             × 画像アップロードキャンセル
           </button>
