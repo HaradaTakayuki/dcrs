@@ -7,8 +7,10 @@ render(<Upload />)
 
 test('main test', () => {
   const main = document.querySelector('main')
-  expect(main?.getAttribute('class')).toEqual('flex min-h-screen flex-col p-24')
+  expect(main?.getAttribute('class')).toEqual(
+    'min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8',
+  )
   expect(main?.textContent).toEqual(
-    'アップロードフォームお名前所属会社社員番号連絡可能な個人電話番号メールアドレス個人情報提供に同意いただけますか?同意する画像をアップロードする確認画面へ',
+    'アップロードフォームは必須項目ですお名前所属会社以下から選択して下さい。株式会社オープンアップグループ株式会社ビーネックステクノロジーズ社員番号連絡可能な個人電話番号メールアドレス個人情報提供への同意同意する画像をアップロードする確認画面へ',
   )
 })
